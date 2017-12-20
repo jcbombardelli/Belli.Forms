@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:c="clr-namespace:Belli.Forms.Control.Controls;assembly=Belli.Forms.Control"
+             x:Class="Belli.Forms.MainPage">
+
+    <ContentPage.Content>
+
+
+        <StackLayout BackgroundColor="Aqua">
+
+
+            <c:EntryTitled Title="oooo"/>
+
+
+
+
+
+        </StackLayout>
+        
+        
+    </ContentPage.Content>
+    
+
+</ContentPage>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:l="clr-namespace:Belli.Forms.Control.Controls"
+             x:Class="Belli.Forms.Control.Controls.EntryTitled"
+             Padding="0">
+
+    <ContentView.Content>
+        <StackLayout x:Name="entryTitled">
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label x:Name="lblTitle" Text="{Binding Title}" 
+                           VerticalOptions="End" HorizontalOptions="Start"
+                           FontSize="Small" TextColor="{Binding TitleColor}"/>
+
+                <Label x:Name="lblRequired"
+                            VerticalOptions="End" HorizontalOptions="Start" />
+
+                <Label x:Name="lblMessage" Text="{Binding Message}"                    
+                           VerticalOptions="End" HorizontalOptions="EndAndExpand"
+                           FontSize="Small" TextColor="{Binding MessageColor}"/>
+
+            </StackLayout>
+
+
+            <StackLayout Orientation="Horizontal">
+
+                <l:ImageColorous x:Name="imgStart" Grid.Row="0" Grid.Column="0"
+                                     VerticalOptions="Center" HorizontalOptions="Start"
+                                     Margin="0,0,-5,0" Aspect="Fill" Source="{Binding IconStart}" 
+                                     Color="{Binding IconStartColor}" />
+
+                <Entry x:Name="entryValue" Grid.Row="0" Grid.Column="1" 
+                       Text="{Binding Path=Text}" Placeholder="{Binding Title}" 
+                       IsEnabled="{Binding IsEnabled}"
+                       VerticalOptions="Center" HorizontalOptions="FillAndExpand" 
+                       IsPassword="{Binding IsPassword}"
+                       Keyboard="{Binding Keyboard}" 
+                       TextChanged="EntryValue_TextChanged" Focused="TapEntryValue_Tapped">
+
+                </Entry>
+
+                <l:ImageColorous x:Name="imgEnd" Grid.Row="0" Grid.Column="2"
+                                     VerticalOptions="Center" HorizontalOptions="End"
+                                     Aspect="Fill" Source="{Binding IconEnd}"
+                                     Color="{Binding IconEndColor}"/>
+
+            </StackLayout>
+
+
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>
